@@ -242,7 +242,8 @@ module Jammit
       [paths].flatten.map {|p| read_binary_file(p) }.join("\n")
     end
 
-    # `File.read`, but in "binary" mode.
+    #  !!!`File.read`, but in "binary" mode. 
+    # https://github.com/documentcloud/jammit/issues#issue/116/comment/709276
     def read_binary_file(path)
       File.open(path, 'r') {|f| f.read }
     end
